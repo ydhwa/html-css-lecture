@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+body {
+/* 	padding-top: 0; */
+/* 	padding-right: 0; */
+/* 	padding-bottom: 0; */
+/* 	padding-left: 0; */
+
+	/* TOP->RIGHT->BOTTOM->LEFT */
+/* 	padding: 0 0 0 0; */
+	padding: 0;
+	margin: 10px;
+	font-size: 12px;
+	font-family: Arial, Helvertica, Sans-serif;
+	color: #333;
+}

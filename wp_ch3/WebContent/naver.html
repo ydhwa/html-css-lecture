@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+* {
+   margin: 0;
+   padding: 0
+}
+#content {
+   width: 740px;
+   height: 100px;
+   margin: auto;
+}
+h1 {
+   margin: 50px auto;
+   margin-right: 15px;
+   width: 210px;
+   height: 50px;
+   font-size: 0;
+   background: url('images/sp_search.png') no-repeat 0 -5px;
+   float: left;
+}
+
+h2 {
+   margin: 50px auto;
+   width: 140px;
+   height: 28px;
+   font-size: 0;
+   background: url('images/sp_search.png') no-repeat -61px -19px;
+   display: none;
+}
+
+h3 {
+   font-size: 0;
+   display: none;
+}
+
+#search-box {
+   float: left; border : 2px solid #03CF5D;
+   width: 496px;
+   height: 45px;
+   margin: 50px auto;
+   border: 2px solid #03CF5D;
+}
+
+input[type=text] {
+   border: 0px;
+   width: 396px;
+   height: 45px;
+   margin-right: 5px;
+   font-size: 35px;
+}
+
+input[type=submit] {
+   width: 45px;
+   height: 45px;
+    background: #03CF5D url('images/sp_search.png') no-repeat 2px -55px;
+}
+
+#search-box input {
+   display: block;
+   float: left;
+   border-width: 0px;
+   box-shadow: none;
+}
+
+#search-box div {
+   float: left;
+   font-size: 0;
+   cursor: pointer;
+}
+
+#keyboard {
+   margin-top: 15px; width : 25px;
+   height: 30px;
+   background: url('images/sp_search.png') no-repeat -30px -55px;
+   width: 25px;
+}
+
+#dropdown {
+   margin-top: 15px;
+   width: 25px;
+   height: 30px;
+   background: url('images/sp_search.png') no-repeat -80px -50px;
+}
+</style>
+</head>
+<body>
+   <div id="content">
+      <h1>네이버</h1>
+      <h2>네이버</h2>
+      <h3>검색</h3>
+      <div id="search-box">
+         <input type="text">
+         <div id="keyboard">키보드</div>
+         <div id="dropdown">드롭다운</div>
+         <input style="border: 7px solid #03CF5D;" type="submit" value="">
+      </div>
+   </div>
+
+</body>
+</html>
