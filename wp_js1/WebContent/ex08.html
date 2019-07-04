@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 배열처럼 접근 가능
+var str = 'hello world';
+for(var i = 0; i < str.length; i++) {
+	console.log(str[i]);
+}
+
+// 문자열 합치기(+)
+var str1 = 'Hello';
+var str2 = "world";
+var str3 = str1 + " " + str2;
+console.log(str3);
+
+var number = 5;
+var str4 = "5" + number;
+console.log(str4);
+
+var str5 = "boolean: " + true;
+console.log(str5);
+
+// 객체 함수
+var str6 = 'string1 string2 string3';
+console.log(str6.length);
+
+var index = str6.indexOf('string4');
+console.log(index);
+
+index = str6.indexOf('string2');
+console.log(index);
+
+var str7 = str6.substr(index);
+console.log(str7);
+
+var str8 = str6.substr(index, 7/*count*/);
+console.log(str8);
+
+var str9 = str6.substr(index, 10/*last index -1*/);
+console.log(str9);
+
+var a = str6.split(' ');
+console.log(a);
+
+var str10 = 'abcdefg';
+a = str10.split(':');
+console.log(a);
+</script>
+
+</head>
+<body>
+<h1>String</h1>
+</body>
+</html>

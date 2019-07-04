@@ -6,92 +6,64 @@
 <script>
 // in
 var o = {
-	name: '또치',
+	name: '마이콜',
 	age: 20,
-	hasProperty: function(property) {
+	hasProperty: function(property){
 		return property in this;
 	}
 }
-
 console.log(o.hasProperty('name'));
 console.log(o.hasProperty('age'));
 console.log(o.hasProperty('email'));
-
 console.log(o.hasOwnProperty('name'));
 console.log(o.hasOwnProperty('age'));
 console.log(o.hasOwnProperty('email'));
-
-
-// with
+// with & for~in
 var o = {
 	name: '둘리',
-	age: 20,
-	info1: function() {
-		console.log(this.name + ':' + this.age);
-		// console.log(name) 하면 오류가 난다.
+	age: 10,
+	info1: function(){
+		console.log(this.name + ":" + this.age)
 	},
-	info2: function() {
-		with(this) {
-			console.log(name + ':' + age);
+	info2: function(){
+		with(this){
+			console.log(name + ":" + age)
 		}
 	},
-	info3: function() {
+	info3: function(){
 		var str = '';
-		// 자동으로 속성 순회
-// 		for(prop in this) {	// prop는 전역 변수이다.
-		for(var prop in this) {		// 블록X 함수 범위 내
-			str += (prop + ':');
+		
+		for(var prop in this){
+			str += (prop + ":");
 		}
-		console.log(str.substring(0, str.length - 1));
+		console.log(str.substring(0, str.length-1));
 	}
 }
-
 o.info1();
 o.info2();
 o.info3();
-
-var F = function(name, age) {
-	this.name = name;
-	this.age = age;
-}
-
-
+	
 </script>
 </head>
 <body>
 <h1>객체2</h1>
 <pre>
 1. Primitive Data Type
-	: Number, String, Boolean, null, undefined
+   (기본 자료형)
+   : Number, String, Boolean, null, undefined  (immutable)
 
-2. Array, Date, Math, RegExp, (Function), String, Boolean
-	: 객체
-	
-3. Number, String, Boolean
-	: 유사객체
+2. Array, Date, Math, RegExp, (Function), Object : 객체
 
-4. class free
-	: class가 없어도 객체 생성이 가능하다.
-	: (ES6 class 키워드가 추가되었지만 내부적으로 prototype과 동일)
+3. Number, String, Boolean : 유사객체
 
-5. 객체가 객체를 포함하기 쉬운 구조
-	: 그래프, 트리, 맵 쉽게 표현 가능
-o = {
-	...,
-	o2 = {
-		...,
-		o3 = {
-		...
-		}
-	}
-}
+4. class free : class가 없어도 객체생성이 가능하다.(ES6 class 키워드가 추가 되었지만....)
 
-6. 객체 하나에 있는 속성들을 다른 객체에 상속해주는 프로토타입 모델
-	: 연결 특성 - 초기화 시간 단축, 메모리 절약
+5. 객체가 객체를 포함하기 쉬운 구성 - 그래프, 트리, 맵 쉽게 표현
 
-7. Object Literal
-	: JSON
-</pre>
+6. 객체 하나에 있는 속성들을 다른 객체에 상속해 주는 프로토타입
+   연결 특성 => 초기화 시간 단축, 메모리 절약
 
+7. Object Literal******** => JSON
+</pre>	
 </body>
 </html>
