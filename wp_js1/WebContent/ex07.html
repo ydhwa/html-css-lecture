@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 배열 정의
+// 1. 생성자 함수
+var a1 = new Array(10);
+a1[0] = 0;
+a1[1] = 1;
+
+console.log('Array a1' + a1);
+console.log('a1.length: ' + a1.length);
+
+// 동적으로 크기가 변하는 배열(에러 안난다.)
+// new Array(size)
+//		size를 주는 것은 별다른 의미가 없지만, 고정사이즈를 주면 성능이 향상된다.
+a1[20] = 20;
+console.log('Array a1' + a1);
+
+
+
+// 배열 정의
+// 2. literal
+var a2 = [];
+console.log('a2.length: ' + a2.length);
+
+// 내부 저장 타입은 정해져 있지 않다.
+a2[0] = 10;
+a2[1] = 'Hello World';
+a2[4] = {
+		name: '둘리'
+};
+
+console.log(a2);
+console.log(a2[2]);	// assign이 되어 있지 않기 때문에 undefined가 나온다.
+
+
+
+// 초기화
+var a3 = [1, 'abc', true];
+console.log(a3);
+
+var a4 = new Array(1, 'abc', true);
+console.log(a4);
+
+
+
+// 순회
+for(var i = 0; i < a4.length; i++) {
+	console.log(a4[i]);
+}
+
+
+
+// 배열 함수 - concat
+var colors = ['black', 'white', 'yellow'];
+var fruits = ['mango', 'banana', 'apple'];
+
+var test = fruits.concat(colors);
+console.log(test);
+
+
+
+// 배열 함수 - join
+var str = fruits.join(',');
+console.log(str);
+
+
+
+// 배열 함수 - pop(stack)
+var color = colors.pop();
+console.log(color);
+console.log(colors);
+
+
+
+// 배열 함수 - push(stack)
+colors.push('red');
+console.log(colors);
+
+
+
+// 배열 함수 - reverse
+fruits.reverse();
+console.log(fruits);
+
+
+
+// 배열 함수 - shift
+var numbers = [1000, 3000, 4000, 2000];
+numbers.shift();
+console.log(numbers);
+
+
+
+// 배열 함수 - slice
+var numbers2 = numbers.slice(0, 2);
+console.log(numbers2);
+
+
+
+// 배열 함수 - sort
+numbers.sort();
+console.log(numbers);
+
+
+
+// 배열 함수 - splice
+console.log(fruits);
+fruits2 = fruits.splice(0/* index */, 2/* count */);	// 삭제
+console.log(fruits);
+console.log(fruits2);
+
+
+
+// 배열을 리스트로 사용하기 
+// insert(index, val), remove(index)
+a = [1, 2, 4];
+a.insert(2, 3);
+console.log(a);
+a.remove(2);
+console.log(a);
+
+
+</script>
+</head>
+<body>
+	<h1>Array</h1>
+</body>
+</html>
