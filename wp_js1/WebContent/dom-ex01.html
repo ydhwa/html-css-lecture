@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>alert('step-0');</script>
+</head>
+<body>
+	<h1>step-1</h1><!-- 이 시점에서 DOM은 생성되었지만 렌더링 속도 때문에 바로 보이지는 않을 것이다. -->
+	<script>alert('step-2');</script>
+	<h1>step-3</h1>
+	<script>alert('step-4');</script>
+	
+</body>
+</html>

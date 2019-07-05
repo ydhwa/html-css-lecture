@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*
+ * 이벤트 종류
+ 1. 마우스
+ 2. 키보드
+ 3. HTML Frame
+ 4. form & input
+ 5. touch
+ */
+ 
+/*
+ * 용어 정리
+ 1. load, click: Event name(Event type)
+ 2. onload, onclick: Event attribute
+ 3. function() {...}: Event listener(Event handler)
+ 
+ Event Model (Event Name에 Event Listener 연결하는 방법)
+ 
+ 1. DOM level 0
+ 	- Inline Event Model
+ 	- Basic Event Model(고전적인 방법, 기본 이벤트 처리)
+ 2. DOM level 2
+	- Microsoft InternetExplorer Event Model -> attatchEvent, detatchEvent
+	- Standard Event Model -> addEventListener, removeEventListener
+ */
+window.onload = function() {	
+}
+
+var header = document.getElementById('header-1')
+header.onclick = function() {
+	
+}
+</script>
+</head>
+<body>
+	<h1></h1>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 문서 객체 CSS 선택자(selector)로 가져오기 (HTML 5부터 지원)
+ window.onload = function() {
+	var header1 = document.querySelector('#header1');
+	var headers = document.querySelectorAll('.header');
+	setTimeout(function() {
+		header1.innerText = 'by querySelector()';
+		headers[1].innerText = 'by querySelectorAll()';
+ 	}, 2000);
+}
+</script>
+</head>
+<body>
+	<h1>문서 객체 가져오기 - 4</h1>
+	<h1 id="header1" class="header">Header1</h1>
+	<h1 class="header">Header2</h1>	
+</body>
+</html>

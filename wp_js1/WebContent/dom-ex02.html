@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.onload = function() {
+	// DOM loading 완료가 된 시점!!!
+	console.log(document.getElementById('header-1'));
+}
+</script>
+</head>
+<body>
+	<h1 id="header-1">step-1</h1><!-- 이 시점에서 DOM은 생성되었지만 렌더링 속도 때문에 바로 보이지는 않을 것이다. -->
+	<h1>step-2</h1>
+	
+</body>
+</html>

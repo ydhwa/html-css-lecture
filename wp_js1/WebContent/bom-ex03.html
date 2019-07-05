@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*
+	var child = window.open('', '', 'width=700, height=700', true);
+	var width = screen.width;
+	var height = screen.height;
+	
+	console.log(width + ":" + height);
+	child.moveTo(0, 0);
+	child.resizeTo(width, height);
+	
+	setInterval(function() {
+		child.resizeBy(-20, -20);
+		child.moveBy(10, 10);
+	}, 500);
+*/
+// var s = '';
+// for(var key in location) {
+// 	s += (key + ': ' + location[key] + '\n');
+// }
+// console.log(s);
+
+// location 객체: 주소창
+// 예제 URL: http://http://localhost:8080/wp-js1/bom-ex03.html?n=동화%e=email@email.com
+// 속성
+// href, host, hostname, port, path, hash, search
+
+</script>
+</head>
+
+<script>alert('loading!');</script>
+
+<body>
+<h1>location 객체</h1>
+
+<!-- refresh 하는 방법 1 -->
+<button onclick='location = location;'>
+	refresh1
+</button>
+
+<!-- refresh 하는 방법 2 -->
+<button onclick='location.href = location.href;'>
+	refresh2
+</button>
+
+<!-- refresh 하는 방법 3 -->
+<button onclick='location.assign(location);'>
+	refresh3
+</button>
+<!-- <button onclick='location.assign("http://www.cafe24.com");'> -->
+<!-- 	cafe24로 이동 -->
+<!-- </button> -->
+
+<!-- refresh 하는 방법 4 -->
+<button onclick='location.replace(location);'>
+	refresh4
+</button>
+
+<!-- refresh 하는 방법 5 -->
+<!-- 캐시가 되며, 가장 많이 사용한다. -->
+<button onclick='location.reload();'>
+	refresh5
+</button>
+</body>
+</html>

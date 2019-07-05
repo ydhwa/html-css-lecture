@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 문서 객체 클래스 이름으로 가져오기
+ window.onload = function() {
+	var headers = document.getElementsByClassName('header');
+	setTimeout(function() {
+		headers[0].innerText = 'by getElementsByClassName()';
+		headers[1].innerText = 'by getElementsByClassName()';
+ 	}, 2000);
+}
+</script>
+</head>
+<body>
+	<h1>문서 객체 가져오기 - 3</h1>
+	<h1 class="header">Header1</h1>
+	<h1 class="header">Header2</h1>	
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+ window.onload = function() {
+	var img = document.createElement('img');
+	
+ 	setTimeout(function() {
+ 		document.body.appendChild(img);
+ 		
+ 		// 표준속성은 문서객체로 설정이 가능하다.
+//  		img.src = 'Hearthstone Screenshot 12-09-18 23.08.38.png';
+//  		img.width = 500;
+//  		img.alt = '하스스톤';
+//  		img.title = '하스스톤 이미지';
+ 		
+ 		// 비표준 속성까지 설정하기 위해서는 메소드를 사용한다.
+ 		img.setAttribute('src', 'Hearthstone Screenshot 12-09-18 23.08.38.png');
+ 		img.setAttribute('width', 500);
+ 		img.setAttribute('alt', '하스스톤');
+ 		img.setAttribute('title', '하스스톤 이미지');
+ 		img.setAttribute('data-name', '하스스톤');
+ 		
+ 	}, 2000);
+}
+</script>
+</head>
+<body>
+	<h1>문서 객체 속성 조작하기</h1>	
+</body>
+</html>
