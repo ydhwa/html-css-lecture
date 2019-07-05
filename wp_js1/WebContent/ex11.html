@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// 함수객체 생성하는 방법 1 - 비추천
+function f1(a, b) {
+	return a + b;
+}
+
+// 함수객체 생성하는 방법 2 - 비추천
+var f2 = Function('a', 'b', 'var sum = a + b; return sum;');
+
+// 함수객체 생성하는 방법 3 - 일반적으로 사용됨
+var f3 = function(a, b) {
+	return a + b;
+}
+
+// Anonymous Function (라이브러리에서 초기화 시 사용된다.)
+var sum = (function(a, b) {
+	return a + b;
+})(10, 20);
+
+console.log(f1(10, 20));
+console.log(f2(10, 20));
+console.log(f3(10, 20));
+
+var sum = function(a, b) {
+	// 기본적으로 명시된 함수 인자 말고
+	// 2개 더 기본으로 받는 함수 인자: this, arguments
+	
+	// Arguments는 Array 객체가 아니다.
+	console.log(arguments instanceof Array);
+	
+	var sum = 0;
+// 	var args = Array.from(arguments);
+// 	args.forEach(function(number) {
+// 		sum += number;
+// 	});
+// 	Array.prototype.forEach.call(arguments, function() {
+// 	});
+
+	for(var i = 0; i < arguments.length; i++) {
+		sum += arguments[i];
+	}
+
+	return sum;
+}
+
+// 가변 함수 파라미터
+console.log(sum(10));
+console.log(sum(10, 20));
+console.log(sum(10, 20, 30));
+console.log(sum(10, 20, 30, 40));
+
+
+// var f = function(arg1, arg2, arg3) {
+// 	console.log(arg1);
+// 	console.log(arg2);
+// 	arg3();
+// }
+var f = function() {
+	console.log(arguments[0]);
+	console.log(arguments[1]);
+// 	arg3();
+}
+
+// anonymouse object
+f(10, {
+	name: '둘리',
+	age: 10
+}, function() {
+	console.log('hello');
+})
+
+</script>
+</head>
+<body>
+<h1>function 객체</h1>
+</body>
+</html>

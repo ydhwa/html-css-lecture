@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+var s = '';
+for(var key in window) {
+	s += (key + ": " + window[key] + '\n');
+}
+console.log(s);
+
+// 새로운 window 객체 생성
+// yes/no, 1/0
+// location, menubar, resizable, toolbar
+// 최근은 layer popup을 더 많이 사용한다.
+setTimeout(function() {
+	var popup = window.open('popup.html', 'popup', 'width=600, height=400', true);
+// 	popup.document.write('<h1>팝업입니다!</h1>');
+	popup.moveTo(0, 0);
+
+	setTimeout(function() {
+		// 자식창의 스크립트도 실행할 수 있다.
+		// 단, 보안 상 cross-domain 문제 때문에 같은 domain에서만 가능하다.
+		
+		// 도메인이 같으면 실행되지만, 다르면 실행되지 않는다.
+		// 서브도메인이 다른 경우면 어떻게 해야 할까?
+		// document.domain의 값을 공통 도메인 값으로 지정해두고, 서브도메인을 거르지 않도록 한다.
+// 		popup.pop();
+	}, 1000);
+	
+// 	setInterval(function() {
+// 		popup.moveBy(10, 10);		
+// 	}, 500);
+	
+}, 2000);
+</script>
+</head>
+<body>
+<h1>Window 전역객체</h1>
+</body>
+</html>
