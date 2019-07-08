@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.onload = function() {
+	var form = document.getElementById('form-login');
+	
+	// DOM level0 - 이벤트 기본 동작 막기(이유 - Validation)
+// 	form.onsubmit = function() {
+// 		var email = document.getElementById('email').value;
+// 		if(email == '') {
+// 			alert('이메일은 필수 입력 항목입니다.');
+// 			document.getElementById('email').focus();
+// 			return false;
+// 		}
+		
+// 		var password = document.getElementById('password').value;
+// 		if(password == '') {
+// 			alert('비밀번호는 필수 입력 항목입니다.');
+// 			document.getElementById('password').focus();
+// 			return false;
+// 		}
+		
+// 		return true;
+// 	}
+	
+	// DOM level2 - 이벤트 기본 동작 막기(이유 - Validation)
+// 	form.addEventListener('submit', function(event) {
+// 		event.preventDefault();		// submit 시 action url로 가는 동작 방지
+// 		var email = document.getElementById('email').value;
+// 		if(email == '') {
+// 			alert('이메일은 필수 입력 항목입니다.');
+// 			document.getElementById('email').focus();
+// 			return;
+// 		}
+		
+// 		var password = document.getElementById('password').value;
+// 		if(password == '') {
+// 			alert('비밀번호는 필수 입력 항목입니다.');
+// 			document.getElementById('password').focus();
+// 			return;
+// 		}
+		
+// 		this.submit();
+// 	});
+	
+	// DOM level2 - 이벤트 기본 동작 막기(이유 - Ajax 통신을 해야 하는 상황)
+	form.addEventListener('submit', function(event) {
+		event.preventDefault();
+		console.log('start log-in with ajax');
+	});
+	
+	// Anchor에 적용하기 (이유 - Ajax 통신)
+	var button = document.getElementById('fetch-data');
+	button.addEventListener('click', function(event) {
+		event.preventDefault();
+		console.log('start fetching...');
+	});
+}
+</script>
+</head>
+<body>
+	<form id='form-login' method='post' action='/user/login'>
+		<label>이메일</label>
+		<br>
+		<input type='text' name='email' id='email'>
+		<br>
+		<br>
+		
+		<label>비밀번호</label>
+		<br>
+		<input type='password' name='password' id='password'>
+		<br>
+		<br>
+		
+		<input type='submit' value='로그인'>
+	</form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a href="#" id="fetch-data">다음 10개</a>
+</body>
+</html>

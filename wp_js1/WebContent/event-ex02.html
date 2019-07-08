@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/* DOM level 0: Inline Event Model */
+
+var onClick = function() {
+	console.log("clicked");
+}
+</script>
+</head>
+<body>
+	<h1 onclick='console.log("clicked");'>click1</h1>
+	<h1 onclick='onClick();'>click2</h1>
+</body>
+</html>
