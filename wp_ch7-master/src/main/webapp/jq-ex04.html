@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="assets/js/jquery/jquery-3.1.1.js"></script>
+<script>
+$(function() {
+	setTimeout(function() {
+		// 1. 태그 선택자
+		var $li = $('li');
+		$li.css('color', '#f00');
+		
+		// 2. ID selector(제일 빠름)
+		$('#third').css('color', '#00f');
+		$('#fourth').css('color', '#00f');
+		
+		// 3. Class selector
+		$('.red').css('color', '#f00');
+		$('.blue').css('color', '#00f');
+		
+		// 4. 전체 선택자
+		$('*').css('font-size', '1.1em');
+		
+		
+		// -- 1, 2, 3, 4 조합 --
+		
+		
+		// 5. 자식(바로 밑에)
+		$('div > ul > li').css('font-weight', 'bold');
+		
+		// 6. 하위(자손들)
+		$('ul strong').css('font-weight', 'normal');
+		
+		// 7. 그룹
+		$('#third, div > ul > *').css('text-decoration', 'underline');
+		
+		// 8. 인접
+		$('#first + li + li').css('color', 'skyblue');
+		
+		// 9. 속성
+		$('li[id]').css('text-decoration', 'line-through');
+		$('li[class="blue"]').css('font-style', 'italic');
+		$('li[class!="blue"]').css('font-family', '굴림');		// 클래스가 없는 애들도 전부 선택된다.
+		
+		// 10. filter
+		$('ul li:first-child').css('background-color', '#aaa');
+		
+// 		$('li:first')
+// 		$('li:last')
+// 		$('li:odd')
+// 		$('li:even')
+// 		$('li:contains("Cat")')
+// 		$('li:has("strong")')
+		
+	}, 1000);
+});
+</script>
+</head>
+<body>
+	<h1>선택자</h1>
+	<ul>
+		<li>텍스트 텍스트 텍스트 텍스트</li>
+		<li>텍스트 텍스트 텍스트 텍스트</li>
+		<li id="third">텍스트 텍스트 텍스트 텍스트</li>
+		<li id="fourth">텍스트 텍스트 텍스트 텍스트</li>
+		<li class="red">텍스트 텍스트 <strong>텍스트</strong> 텍스트</li>
+		<li class="blue">텍스트 텍스트 텍스트 텍스트</li>
+	</ul>
+	
+	<div>
+		<ul>
+			<li id="first">Bag</li>
+			<li>Cat</li>
+			<li>Dot</li>
+			<li>Eye</li>
+		</ul>
+	</div>
+</body>
+</html>

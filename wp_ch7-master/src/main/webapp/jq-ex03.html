@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="assets/js/jquery/jquery-3.1.1.js"></script>
+<script>
+var $obj = {
+	"0": document.getElementById('header'),
+	length: 1
+}
+
+$(function() {
+	var $h1 = $('#header');
+
+	/* jQuery 객체 */
+	console.log($h1.length);
+	console.log(typeof($h1) + ':' + $h1 instanceof Array); 
+	console.log($h1[0] + ":" + typeof($h1[0]));
+	console.log($h1.get(0) + ":" + typeof($h1[0]));
+});
+
+
+</script>
+</head>
+<body>
+	<h1 id="header">jQuery Object</h1>
+</body>
+</html>

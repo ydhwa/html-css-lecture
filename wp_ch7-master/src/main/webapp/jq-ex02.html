@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- CDN을 사용하는 방법 -->
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.js"></script> -->
+<!-- 내려받아 사용하기 -->
+<script type="text/javascript" src="assets/js/jquery/jquery-3.1.1.js"></script>
+<script>
+// Element를 선택해야 하는 시점1(Vanila)
+window.onload = function() {
+	console.log(document.getElementById('header'));
+}
+
+//Element를 선택해야 하는 시점2(jQuery 함수를 사용)
+jQuery(document).ready(function() {
+	console.log($('#header'));
+});
+
+//Element를 선택해야 하는 시점3($ 함수를 사용)
+$(document).ready(function() {
+	console.log($('#header'));
+});
+
+//Element를 선택해야 하는 시점4($ 함수를 사용)
+$(function() {
+	console.log($('#header'));
+});
+
+</script>
+</head>
+<body>
+	<h1 id="header">Element를 선택해야 하는 시점</h1>
+</body>
+</html>
